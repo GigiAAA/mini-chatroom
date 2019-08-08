@@ -1,5 +1,8 @@
 package com.bittech.Riri.chatroom.utils;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -9,6 +12,7 @@ import java.util.Properties;
  * 静态方法
  */
 public class CommUtils {
+    private static final Gson gson=new GsonBuilder().create();
     private CommUtils(){}
 
     /**
@@ -27,5 +31,18 @@ public class CommUtils {
             e.printStackTrace();
         }
         return properties;
+    }
+
+    //将对象变为字符串
+    public static String Object2Json(Object obj){
+        return gson.toJson(obj);
+    }
+    //反序列化
+    public static Object json2Object(String jsonStr,Class objClass){
+        return gson.fromJson(jsonStr,objClass);
+    }
+
+    public static boolean strIsNull(String str){
+        return str==null || str.equals("");
     }
 }

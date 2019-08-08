@@ -1,0 +1,14 @@
+群聊:{"msg":"777","type":1} 
+私聊:{"to":"0-","msg":"33333","type":2}
+
+
+public class Message2Client {
+    private String content;
+    private Map<String, String> names;
+}
+
+public class MessageFromClient {
+   private String msg;
+   private String type;
+   private String to;
+}

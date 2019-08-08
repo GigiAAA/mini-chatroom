@@ -11,5 +11,15 @@
       <user-name>root</user-name>
       <introspection-schemas>*:jdbc</introspection-schemas>
     </data-source>
+    <data-source name="chatroom_websocket@localhost" uuid="eabb76c9-1762-46ba-8c7a-559bcae02f4f">
+      <database-info product="MySQL" version="5.5.58" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.44 ( Revision: b3cda4f864902ffdde495b9df93937c3e20009be )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <introspection-schemas>*:chatroom_websocket</introspection-schemas>
+    </data-source>
   </component>
 </project>

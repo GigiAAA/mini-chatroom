@@ -48,7 +48,6 @@ public class AccountDao extends BaseDao {
             statement=connection.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
             statement.setString(1,userName);
             statement.setString(2,DigestUtils.md5Hex(password));
-            statement.setString(3,picture);
             isSuccess=(statement.executeUpdate()==1);
         }catch (Exception e){
             System.err.println("用户注册失败");
@@ -64,7 +63,6 @@ public class AccountDao extends BaseDao {
         user.setId(resultSet.getInt("id"));
         user.setUserName(resultSet.getString("username"));
         user.setPassword(resultSet.getString("password"));
-        user.setPicture(resultSet.getString("picture"));
         return user;
     }
 }

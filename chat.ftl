@@ -6,10 +6,10 @@
     <title>时话时说</title>
 
 
-    <link rel="stylesheet" href="assets/css/bootstrap.css"/>
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="assets/css/build.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/css/qq.css"/>
+    <link rel="stylesheet" href="asserts/css/bootstrap.css"/>
+    <link rel="stylesheet" href="asserts/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="asserts/css/build.css"/>
+    <link rel="stylesheet" type="text/css" href="asserts/css/qq.css"/>
 
 </head>
 <body>
@@ -50,7 +50,7 @@
 </div>
 
 
-<script src="assets/js/jquery_min.js"></script>
+<script src="asserts/js/jquery_min.js"></script>
 <script src="https://cdn.bootcss.com/jquery.form/4.2.2/jquery.form.min.js"></script>
 <script type="text/javascript">
     var webSocket = null;
@@ -86,7 +86,7 @@
                         + '<input type="checkbox" class="styled" id="' + key + '" value="' + key + '" checked>'
                         + '<label for="' + key + '"></label>'
                         + '</div>'
-                        + '<div class="liLeft"><img src="assets/img/robot2.jpg"/></div>'
+                        + '<div class="liLeft"><img src="asserts/img/robot2.jpg"/></div>'
                         + '<div class="liRight">'
                         + '<span class="intername">' + value + '</span>'
                         + '</div>'
@@ -115,7 +115,7 @@
         $("#dope").val("");
 
             //发送消息
-            var htmlstr = '<li><div class="answerHead"><img src="assets/img/2.png"></div><div class="answers">'
+            var htmlstr = '<li><div class="answerHead"><img src="asserts/img/2.png"></div><div class="answers">'
                     + '[本人]' + '   ' + time + '<br/>' + message + '</div></li>';
             webSocketSend(htmlstr,message,"");
     };
@@ -169,7 +169,7 @@
     function setMessageInnerHTML(innerHTML) {
             var msg = '<li>'
                     + '<div class="nesHead">'
-                    + '<img src="assets/img/robot.jpg">'
+                    + '<img src="asserts/img/robot.jpg">'
                     + ' </div>'
                     + '<div class="news">'
                     + innerHTML
